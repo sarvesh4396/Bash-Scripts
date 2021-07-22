@@ -11,7 +11,7 @@ blue="\e[0;94m"
 reset="\e[0m"
 
 # Tools to install
-declare -a tools=("git" "python" "wget")
+declare -a tools=("git" "python" "wget" "openssh")
 
 # Function to install termux package
 function install {
