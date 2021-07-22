@@ -17,6 +17,7 @@ declare -a tools=("git" "python" "wget")
 function install {
     com="pkg install $1"
     command $com # Execute command
+    command clear
 }
 
 # Function to Prompt user to install a particular package or not
@@ -36,6 +37,7 @@ function prompt {
 
 # Updating system packages
 command pkg update && pkg upgrade -y
+command clear
 
 # Iterating the tools array using for loop
 for tool in ${tools[@]}; do
