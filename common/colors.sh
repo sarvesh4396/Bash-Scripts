@@ -63,6 +63,7 @@ echo ""
 echo -e "${red}This sentence ${green}displays ${blue}ansi code used in ${white}${bold}combination.${reset}"
 echo -e "${red}Hello World!${reset}"
 
+# Function to print coloured text
 function print_colored_text {
     # $1 will be text
     # $2 will be ascii color code
