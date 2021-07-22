@@ -34,6 +34,9 @@ function prompt {
 
 }
 
+# Updating system packages
+command pkg update && pkg upgrade -y
+
 # Iterating the tools array using for loop
 for tool in ${tools[@]}; do
     if prompt "${tool}"; then
