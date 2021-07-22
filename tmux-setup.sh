@@ -15,15 +15,14 @@ declare -a tools=("git" "python" "wget")
 
 # Function to install termux package
 function install {
-    com="pkg install $1"
+    com="pkg install $1 -y"
     command $com # Execute command
-    command clear
 }
 
 # Function to Prompt user to install a particular package or not
 function prompt {
     echo -e "Do you want to install $green$1${reset}? $blue[Y/n]:$reset "
-    read -r response
+    read -p -r response
     case $response in [yY][eE][sS] | [yY] | [jJ] | '')
         response=0 # True
         ;;
