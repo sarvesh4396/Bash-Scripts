@@ -35,7 +35,7 @@ function prompt {
 }
 
 # Updating system packages
-command pkg update && pkg upgrade -y
+command sudo apt update && sudo apt upgrade -y
 command clear
 
 # Iterating the tools array using for loop
