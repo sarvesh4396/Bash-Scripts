@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # -*- coding: utf-8 -*-
 
-# Contains Colors code and function to print same
+# Contains Colours code and functions
 
 # shellcheck disable=SC2034
 # SC2034 unused variables
-
 # Taken from https://techstop.github.io/bash-script-colors/
 
 # Ansi color code variables
+
 red="\e[0;91m"
 blue="\e[0;94m"
 expand_bg="\e[K"
@@ -25,8 +25,6 @@ reset="\e[0m"
 echo -e "${blue_bg}${reset}"
 echo -e "${red_bg}${reset}"
 echo -e "${green_bg}${reset}"
-
-echo ""
 
 # colored text
 echo -e "${red}Hello World!${reset}"
