@@ -6,5 +6,18 @@
 # This function will clone the github  repository url to the desired destination
 
 function clone() {
-    echo "$1" # arguments are accessible through $1, $2,...
+    dest=${@: -1} # last element
+    for arg in "${@:1:$# -1}" # accessing all elements accept last
+    do
+        com="git clone ${arg} ${dest}" # git clone url formation
+        echo $com # execution command
+    done
 }
+
+clone url1 url2 url3 destination #demo input
+
+# Output should be
+
+# git clone url1 destination
+# git clone url2 destination
+# git clone url3 destination
